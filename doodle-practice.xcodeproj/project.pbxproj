@@ -16,6 +16,10 @@
 		C7F37AD72AAEA03700453149 /* signin-pratice.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F37AD62AAEA03700453149 /* signin-pratice.swift */; };
 		C7F37AD92AAEA04B00453149 /* login-pratice.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F37AD82AAEA04B00453149 /* login-pratice.swift */; };
 		C7F37ADB2AAEA05300453149 /* signup-page.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F37ADA2AAEA05300453149 /* signup-page.swift */; };
+		C7F37ADD2AAEA3AF00453149 /* a.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F37ADC2AAEA3AF00453149 /* a.swift */; };
+		C7F37ADF2AAEA3B500453149 /* b.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F37ADE2AAEA3B500453149 /* b.swift */; };
+		C7F37AE12AAEA3BE00453149 /* c.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F37AE02AAEA3BE00453149 /* c.swift */; };
+		C7F37AE32AAEA3E200453149 /* d.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F37AE22AAEA3E200453149 /* d.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +34,10 @@
 		C7F37AD62AAEA03700453149 /* signin-pratice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "signin-pratice.swift"; sourceTree = "<group>"; };
 		C7F37AD82AAEA04B00453149 /* login-pratice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "login-pratice.swift"; sourceTree = "<group>"; };
 		C7F37ADA2AAEA05300453149 /* signup-page.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "signup-page.swift"; sourceTree = "<group>"; };
+		C7F37ADC2AAEA3AF00453149 /* a.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = a.swift; sourceTree = "<group>"; };
+		C7F37ADE2AAEA3B500453149 /* b.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = b.swift; sourceTree = "<group>"; };
+		C7F37AE02AAEA3BE00453149 /* c.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = c.swift; sourceTree = "<group>"; };
+		C7F37AE22AAEA3E200453149 /* d.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = d.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +80,10 @@
 				C73D850D2AA9E4EE00D566FC /* Assets.xcassets */,
 				C73D850F2AA9E4EE00D566FC /* LaunchScreen.storyboard */,
 				C73D85122AA9E4EE00D566FC /* Info.plist */,
+				C7F37ADC2AAEA3AF00453149 /* a.swift */,
+				C7F37ADE2AAEA3B500453149 /* b.swift */,
+				C7F37AE02AAEA3BE00453149 /* c.swift */,
+				C7F37AE22AAEA3E200453149 /* d.swift */,
 			);
 			path = "doodle-practice";
 			sourceTree = "<group>";
@@ -147,10 +159,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C7F37AE12AAEA3BE00453149 /* c.swift in Sources */,
 				C7F37AD72AAEA03700453149 /* signin-pratice.swift in Sources */,
 				C73D85092AA9E4ED00D566FC /* practice.swift in Sources */,
 				C7F37ADB2AAEA05300453149 /* signup-page.swift in Sources */,
 				C73D85052AA9E4ED00D566FC /* AppDelegate.swift in Sources */,
+				C7F37ADF2AAEA3B500453149 /* b.swift in Sources */,
+				C7F37AE32AAEA3E200453149 /* d.swift in Sources */,
+				C7F37ADD2AAEA3AF00453149 /* a.swift in Sources */,
 				C7F37AD92AAEA04B00453149 /* login-pratice.swift in Sources */,
 				C73D85072AA9E4ED00D566FC /* SceneDelegate.swift in Sources */,
 			);
