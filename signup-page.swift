@@ -278,14 +278,11 @@ class SignupViewController: UIViewController {
         // 로딩화면
         showLoadingScreen()
 
-        // 사용자 등록 버튼을 누르면 실행되는 함수
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) { [weak self] in
             guard let self = self else { return }
 
-            // UserDefaults에서 'users' 키로 저장된 데이터를 불러옴. 이 데이터는 이전에 등록된 모든 사용자 정보를 담고 있음.
             if let usersData = UserDefaults.standard.array(forKey: "users") as? [Data] {
                 for userData in usersData {
-                    // 사용자 데이터를 User 객체로 디코딩하고, 입력된 이메일과 저장된 이메일이 같은지 확인
                     if let user = try? JSONDecoder().decode(User.self, from: userData),
                        user.email == email
                     {
@@ -299,8 +296,7 @@ class SignupViewController: UIViewController {
                     }
                 }
             }
-
-            // 새로운 User 객체 생성
+            // user
             let user = User(email: email, name: name, password: password)
 
             if var usersData = UserDefaults.standard.array(forKey: "users") as? [Data] {

@@ -517,9 +517,7 @@ final class SigninViewController: UIViewController {
                 // textfield.isSecureTextEntry = true
             }
 
-            // "완료" 액션: 사용자가 새로운 비밀번호를 입력하고 '완료' 버튼을 눌렀을 때 수행됨.
             let confirmAction = UIAlertAction(title: "완료", style: .default) { _ in
-                // 첫 번째와 두 번째 텍스트 필드에서 비밀번호를 가져옴.
                 guard let passwordField1 = newPasswordAlert.textFields?[0],
                       let passwordField2 = newPasswordAlert.textFields?[1]
                 else {
@@ -529,23 +527,26 @@ final class SigninViewController: UIViewController {
                     self.passwordMatchAlert()
                     print("새로운 비밀번호 업데이트완료")
 
-                    // 저장된 모든 사용자 데이터를 가져와서 이메일이 일치하는 사용자의 비밀번호를 업데이트함.
                     if var usersData = UserDefaults.standard.array(forKey: "users") as? [Data] {
                         for (index, userData) in usersData.enumerated() {
                             if var user = try? JSONDecoder().decode(User.self, from: userData),
-                               user.email == self.emailTextField.text
+                               user.email == self.idTextField.text
                             {
                                 // 새롭게 입력된 비밀번호로 변경함
                                 user.password = passwordField1.text ?? ""
 
-                                if let updatedUserData = try? JSONEncoder().encode(user) {
-                                    // 배열 내 해당 유저 정보 갱신.
+                                do {
+                                    // 변경된 유저 정보를 다시 인코딩.
+                                    let updatedUserData = try JSONEncoder().encode(user)
+
+                                    // 배열 내 해당 유저 정보를 갱신.
                                     usersData[index] = updatedUserData
 
-                                    // 갱신된 유저 정보 배열 UserDefaults에 다시 저장
+                                    // 갱신된 유저 정보 배열을 UserDefaults에 다시 저장
                                     UserDefaults.standard.set(usersData, forKey: "users")
-                                } else {
-                                    print("유저 데이터 인코딩 실패")
+
+                                } catch {
+                                    print(error.localizedDescription)
                                 }
                             }
                         }
